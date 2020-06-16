@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <title>Home Page</title>
+	    <meta charset="utf-8"/>
+	    <link rel="stylesheet" th:href="@{/css/home.css}"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 		
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+	<form th:action="@{/sacuvaj-korisnika}" th:object="${korisnik}" method="post">
+  <div class="form-group">
+    <label for="name">Ime:</label>
+    <input type="text" class="form-control" id="name" th:field="*{name}"/>
+  </div>
+  <div class="form-group">
+    <label for="surname">Prezime:</label>
+    <input type="text" class="form-control" id="surname" th:field="*{surname}"/>
+  </div>
+  <div class="form-group">
+    <label for="userName">Korisnicko ime:</label>
+    <input type="text" class="form-control" id="userName" th:field="*{userName}"/>
+  </div>
+  <div class="form-group">
+    <label for="Date">Datum Rodjenja:</label>
+    <input type="text" class="form-control" id="Date" th:field="*{Date}"/>
+  </div>
+  <div class="form-group">
+    <label for="password">Lozinka:</label>
+    <input type="password" class="form-control" id="password" th:field="*{password}"/>
+  </div>
+  <div class="form-group">
+    <label for="contactTel">Kontakt:</label>
+    <input type="text" class="form-control" id="contactTel" th:field="*{contactTel}"/>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" th:field="*{email}"/>
+  </div>
+  
+ 
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">Potvrdi registraciju</button>
+</form>
+	</body>
+</html>
