@@ -1,6 +1,9 @@
 package com.example.kontrolna_tacka1.entity;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -21,10 +24,24 @@ public class Bioskop implements Serializable {
 	@Column
 	private String email;
 	
-	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	private Manager manager;
+	public Bioskop()
+	{
+		
+	}
+	public Bioskop(long id, String naziv, String adresa, String brCentrale, String email) {
+		super();
+		this.id = id;
+		this.naziv = naziv;
+		this.adresa = adresa;
+		this.brCentrale = brCentrale;
+		this.email = email;
+	}
 	
-	@OneToMany(mappedBy = "bioskop", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+	@ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
+	private Menadzer manager;
+	
+	
+	@OneToMany(mappedBy = "bioskop", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
 	private Set<Sala> sale = new HashSet<>();
 	
 	@ManyToMany
@@ -69,10 +86,10 @@ public class Bioskop implements Serializable {
 	public void setSale(Set<Sala> sale) {
 		this.sale = sale;
 	}
-	public Manager getManager() {
+	public Korisnik getManager() {
 		return manager;
 	}
-	public void setManager(Manager manager) {
+	public void setManager(Menadzer manager) {
 		this.manager = manager;
 	}
 	public Set<Projekcija> getRaspored() {

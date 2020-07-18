@@ -2,10 +2,11 @@ package com.example.kontrolna_tacka1.entity;
 
 import javax.persistence.*;
 
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.io.Serializable;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.ArrayList;
 
@@ -32,17 +33,39 @@ public class Film implements Serializable {
 	private double trajanje;
 	@Column
 	private double ocena;
+	@Column
+	private boolean odgledan;
+	
+	public Film()
+	{
+		
+	}
 	
 	
+	public Film(long id, String naziv, String opis, String zanr, double trajanje, double ocena, boolean odgledan) {
+		super();
+		this.id = id;
+		this.naziv = naziv;
+		this.opis = opis;
+		this.zanr = zanr;
+		this.trajanje = trajanje;
+		this.ocena = ocena;
+		this.odgledan = odgledan;
+	}
+
 	//druga strana veze s gledaocem
 	@ManyToMany(mappedBy = "filmovi")
-	private Set<Gledaoc> gledaoci = new HashSet<>();
+	private Set<Gledalac> gledaoci = new HashSet<>();
 	
 	@ManyToMany(mappedBy = "rezervisani_filmovi")
-	private Set<Gledaoc> gledaoci_rez = new HashSet<>();
+	private Set<Gledalac> gledaoci_rez = new HashSet<>();
 	
 	@ManyToMany(mappedBy = "ocene")
-	private Set<Gledaoc> gledaoci_ocene = new HashSet<>();
+	private Set<Gledalac> gledaoci_ocene = new HashSet<>();
+	
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	@OneToMany(mappedBy="film")
+	private List<Projekcija> projekcije=new ArrayList<>();
 	
 	
 	public String getNaziv() {
@@ -74,6 +97,12 @@ public class Film implements Serializable {
 	}
 	public void setOcena(double ocena) {
 		this.ocena = ocena;
+	}
+	public boolean isOdgledan() {
+		return odgledan;
+	}
+	public void setOdgledan(boolean odgledan) {
+		this.odgledan = odgledan;
 	}
 	
 	

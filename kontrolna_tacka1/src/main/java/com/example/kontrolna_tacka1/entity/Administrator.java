@@ -1,7 +1,8 @@
 package com.example.kontrolna_tacka1.entity;
 
-import java.io.Serializable;
+import javax.persistence.Entity;
 
-public class Administrator extends Korisnik implements Serializable {
+@Entity
+public class Administrator extends Korisnik {
 
 }

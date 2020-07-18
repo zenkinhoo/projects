@@ -22,17 +22,13 @@ public class KorisnikService {
     	return this.korisnikRepository.save(korisnik);
     }
 
-
 	public List<Korisnik> findAll() {
-		// TODO Auto-generated method stub
 		List<Korisnik> korisnici = this.korisnikRepository.findAll();
         return korisnici;
 	}
 	
-	public Korisnik findByuserNameAndPassword(String userName, String password)
-	{
-		return this.korisnikRepository.findByuserNameAndPassword(userName, password);
-	}
+	
+	
 	
 	
 

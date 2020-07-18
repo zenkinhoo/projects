@@ -31,5 +31,13 @@ public class BioskopService {
 		List<Bioskop> bioskopi = this.bioskopRepository.findAll();
         return bioskopi;
 	}
+	public void delete(Long id) {
+		this.bioskopRepository.deleteById(id);
+	}
+	
+	public Bioskop findOne(Long id) {
+		Bioskop bioskop=this.bioskopRepository.getOne(id);
+		return bioskop;
+	}
 	
 }

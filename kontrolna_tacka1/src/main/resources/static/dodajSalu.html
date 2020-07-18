@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <title>Home Page</title>
+	    <meta charset="utf-8"/>
+	    <link rel="stylesheet" type="text/css" href="/css/registrationMan.css"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  		 <script src="/js/jquery.min.js"></script>
+  		<script type="text/javascript" src="/js/dodajSalu.js"></script>
+  	
+
+  		
+	</head>
+	<body style="background-image:url('images/background.jpg')">
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="index.html">Home</a></li>
+        <li><a href="bioskop.html">Bioskopi</a></li>
+        <li><a href="filmovi.html">Filmovi</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li ><a href="registrationMan.html"><span class="glyphicon glyphicon-log-in"></span>Registracija menadzera</a></li>
+      <li class="active"><a href="registration.html"><span class="glyphicon glyphicon-log-in"></span>Registracija korisnika</a></li>
+        <li><a href="prijava.html"><span class="glyphicon glyphicon-log-in"></span> Prijavite se</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	
+	<form action="bioskop.html">
+  <div class="container">
+    <h1>Dodavanje sale</h1>
+    <p>Molimo vas popunite ovu formu da biste dodali salu.</p>
+    <hr>	
+    <label for="kapacitet"><b>Kapacitet</b></label>
+    <input type="text" placeholder="Enter User Name"  id="kapacitet" required>
+   
+    
+    <label for="oznaka"><b>Oznaka</b></label>
+    <input type="text" placeholder="Enter Surname"  id="oznaka" required>	
+
+
+
+    <button type="submit" class="registerbtn">Dodaj salu</button>
+    
+    
+  </div>
+  
+ 
+</form>
+	</body>
+</html>

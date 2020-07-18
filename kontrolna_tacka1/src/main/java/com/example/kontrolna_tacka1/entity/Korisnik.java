@@ -5,10 +5,11 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-enum Role {VIEWER,MANAGER,ADMINISTRATOR}
 
-@Entity
+
+@MappedSuperclass
 public class Korisnik implements Serializable {
+	
 	
 	 @Id
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,11 +27,32 @@ public class Korisnik implements Serializable {
 	 @Column
 	private String Date;
 	 @Column
-	private Role role;
+	private String role;
 	 @Column
 	private boolean active;
 	 @Column
 	private String userName;
+	 
+	 //veze s filmom kao gledaoc
+	 
+	
+		
+		
+		
+		public Korisnik()
+		{}
+		public Korisnik(String korisnickoIme, String lozinka, String ime, String prezime, String kontaktTelefon,
+				String eadresa, String datumRodjenja,String uloga) {
+			super();
+			this.userName = korisnickoIme;
+			this.password= lozinka;
+			this.name = ime;
+			this.surname = prezime;
+			this.contactTel = kontaktTelefon;
+			this.email = eadresa;
+			this.Date = datumRodjenja;
+			this.role=uloga;
+		}
 	public long getId() {
 		return id;
 	}
@@ -79,10 +101,10 @@ public class Korisnik implements Serializable {
 	public void setDate(String date) {
 		this.Date = date;
 	}
-	public Role getRole() {
+	public String getRole() {
 		return role;
 	}
-	public void setRole(Role role) {
+	public void setRole(String role) {
 		this.role = role;
 	}
 	public boolean isActive() {
@@ -91,11 +113,13 @@ public class Korisnik implements Serializable {
 	public void setActive(boolean active) {
 		this.active = active;
 	}
+	
+
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return super.toString();
 	}
+	
 	
 	
 

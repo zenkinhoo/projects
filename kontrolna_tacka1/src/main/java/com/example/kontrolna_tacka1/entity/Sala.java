@@ -17,17 +17,33 @@ public class Sala implements Serializable {
 	@Column
 	private String oznaka;
 	
+	public Sala()
+	{
+		
+	}
 	
+	
+	
+	public Sala(long id, int kapacitet, String oznaka) {
+		super();
+		this.id = id;
+		this.kapacitet = kapacitet;
+		this.oznaka = oznaka;
+	}
+
+
+
 	@ManyToMany
     @JoinTable(name = "sala_projekcija",
     joinColumns = @JoinColumn(name = "sala_id", referencedColumnName = "id"),
     inverseJoinColumns = @JoinColumn(name = "projekcija_id", referencedColumnName = "id"))
 	private Set<Projekcija> projekcije = new HashSet<>();
 	
+		
 	
 	//druga strana veze
 	
-	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
 	private Bioskop bioskop;
 	
 	// terminska lista projekcija
