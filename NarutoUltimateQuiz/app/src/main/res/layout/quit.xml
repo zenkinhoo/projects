@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="340dp"
+    android:layout_height="250dp"
+
+    android:layout_gravity="center"
+    android:background="@drawable/cloudy"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/areYouSure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/krona_one"
+        android:gravity="center_horizontal"
+        android:text="Are you sure you want to quit ?"
+        android:textColor="@color/colorFont"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnYes"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/krona_one"
+            android:text="Yes"
+            android:textColor="@color/colorFont"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnNo"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/krona_one"
+            android:text="No"
+            android:textColor="@color/colorFont"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</LinearLayout>

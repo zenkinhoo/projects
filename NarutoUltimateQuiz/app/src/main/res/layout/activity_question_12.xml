@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/cloudy"
+    tools:context=".Question_12">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/krona_one"
+        android:gravity="center_horizontal"
+        android:text="Question 12"
+        android:textColor="@color/colorFont"
+        android:textSize="28sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="370dp"
+        android:layout_height="290dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        android:src="@drawable/question12" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/krona_one"
+        android:gravity="center_horizontal"
+        android:text="Which message was sent by Jiraiya to Konoha after being killed by Pain?"
+        android:textColor="@color/colorFont"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/question12_wrong1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/krona_one"
+            android:text="There are 6 of them"
+            android:textColor="@color/colorFont"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/question12_wrong2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/krona_one"
+            android:text="They are going to attack in 30 days "
+            android:textColor="@color/colorFont"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/question12_wrong3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/krona_one"
+            android:text="Nagato is their leader"
+            android:textColor="@color/colorFont"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/question12_correct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/krona_one"
+            android:text="Real isn't among them"
+            android:textColor="@color/colorFont"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPrevious12"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginRight="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:fontFamily="@font/krona_one"
+            android:text="Previous Question"
+            android:textColor="@color/colorFont" />
+
+        <Button
+            android:id="@+id/btnNext12"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:fontFamily="@font/krona_one"
+            android:text="Next Question"
+            android:textColor="@color/colorFont" />
+    </LinearLayout>
+
+</LinearLayout>

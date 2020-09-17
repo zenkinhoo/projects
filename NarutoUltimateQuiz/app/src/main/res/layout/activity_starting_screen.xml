@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:id="@+id/startingScreen"
+    android:orientation="vertical"
+    tools:context=".StartingScreen">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/krona_one"
+        android:gravity="center_horizontal"
+        android:text="Naruto Ultimate Quiz"
+        android:textColor="@color/colorFont"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnPlay"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="23dp"
+
+        android:layout_marginRight="40dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/krona_one"
+        android:text="Play "
+        android:textColor="@color/colorFont"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnSound"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="23dp"
+
+        android:layout_marginRight="40dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/krona_one"
+        android:text="Sound Settings"
+        android:textColor="@color/colorFont"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnTable"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="23dp"
+
+        android:layout_marginRight="40dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/krona_one"
+        android:text="High Scores"
+        android:textColor="@color/colorFont"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnQuit"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="23dp"
+
+        android:layout_marginRight="40dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/krona_one"
+        android:text="Quit "
+        android:textColor="@color/colorFont"
+        android:textSize="18sp" />
+
+</LinearLayout>
