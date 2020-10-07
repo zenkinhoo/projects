@@ -274,6 +274,7 @@ public class GameNarutoHard extends AppCompatActivity {
                            randSounds.get(curr).stop();
                            randSounds.get(curr).release();
                            Playgame.setImageResource(R.drawable.play);
+                           Playgame.setEnabled(false);
                        }
                        else
                        {
@@ -293,6 +294,7 @@ public class GameNarutoHard extends AppCompatActivity {
                        enterSolution.setEnabled(true);
                        btnSubmit.setEnabled(true);
                        btnNext.setEnabled(false);
+                       Playgame.setEnabled(true);
                        String scoreString = String.format("Question:%d/5",curr+1);
                        txtQuestions.setText(scoreString);
                        txtScore.setText(String.format("Score:%d/5",score));

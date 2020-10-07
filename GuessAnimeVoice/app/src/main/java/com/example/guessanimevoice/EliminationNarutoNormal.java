@@ -348,7 +348,7 @@ public class EliminationNarutoNormal extends AppCompatActivity {
                         CorWro.setTextColor(Color.GREEN);
                         score++;
                         soundCorrect.start();
-                        if(curr==40) //znaci da je igrica pobedjena
+                        if(curr==66) //znaci da je igrica pobedjena
                         {
                             btnNext.setText("Finish");
                             soundCorrect.release();
@@ -391,6 +391,7 @@ public class EliminationNarutoNormal extends AppCompatActivity {
                     randSounds.get(curr).stop();
                     randSounds.get(curr).release();
                     Playgame.setImageResource(R.drawable.play);
+                    Playgame.setEnabled(false);
                 }
                 else
                 {
@@ -441,6 +442,7 @@ public class EliminationNarutoNormal extends AppCompatActivity {
                 enterSolution.setEnabled(true);
                 btnSubmit.setEnabled(true);
                 btnNext.setEnabled(false);
+                Playgame.setEnabled(true);
                 String scoreString = String.format("Question:%d",curr+1);
                 txtQuestions.setText(scoreString);
                 txtScore.setText(String.format("Score:%d",score));
@@ -454,7 +456,7 @@ public class EliminationNarutoNormal extends AppCompatActivity {
     public List<MediaPlayer> getSounds()
     {
         List<MediaPlayer> ret = new ArrayList<>();
-        for(int i=0;i<5;i++)
+        for(int i=0;i<sounds.size()-2;i++)
         {
             Random r = new Random();
             final MediaPlayer randSound = sounds.get(r.nextInt(sounds.size()));
